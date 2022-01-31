@@ -1,0 +1,43 @@
+.section.we {
+  background-color: var(--section-dg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.title-we {
+  margin-bottom: 50px;
+}
+.we-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.we-item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.we-list .we-item:not(:last-child) {
+  width: 270px;
+  margin-right: 30px;
+}
+
+.container-card {
+  padding: 30px 20px 30px 20px;
+  text-align: center;
+}
+
+.team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--link-text-color);
+  margin-bottom: 10px;
+}
+
+.position {
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 16px;
+}

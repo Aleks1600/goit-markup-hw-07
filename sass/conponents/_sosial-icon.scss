@@ -1,0 +1,59 @@
+.card-icon-list {
+  display: flex;
+  justify-content: center;
+}
+.card-icon-item + .card-icon-item {
+  margin-left: 10px;
+}
+
+.card-icon-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--secondary-text-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+  transition-property: color, background-color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+.card-icon-link-logo {
+  fill: currentColor;
+}
+.card-icon-link:hover,
+.card-icon-link:focus {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+}
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
+
+.footer-icon-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+
+.footer-icon-link-logo {
+  fill: var(--secondary-text-color);
+}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+  background-color: var(--accent-color);
+}
