@@ -5,16 +5,18 @@
   line-height: 1.19;
   color: var(--first-logo-color);
 }
-.header-logo > span {
-  color: #000000;
-}
+
 .header-logo {
   margin-right: 93px;
+  & > span {
+    color: #000000;
+  }
 }
-.footer-logo > span {
-  color: var(--secondary-text-color);
-}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
+  & > span {
+    color: var(--secondary-text-color);
+  }
 }

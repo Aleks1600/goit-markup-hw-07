@@ -10,10 +10,11 @@
   display: block;
   width: 270px;
   margin-right: 30px;
+  &:nth-child(4) {
+    margin-right: 0;
+  }
 }
-.advantage-list .advantage-item:nth-child(4) {
-  margin-right: 0;
-}
+
 .advantage-item-container {
   display: flex;
   background-color: #f5f4fa;

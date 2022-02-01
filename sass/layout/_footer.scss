@@ -23,11 +23,12 @@
   transition-property: color;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+  }
 }
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--secondary-text-color);
-}
+
 .footer-link-address {
   font-style: normal;
   font-size: 14px;

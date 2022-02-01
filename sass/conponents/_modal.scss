@@ -11,10 +11,11 @@
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
-}
+
 .modal {
   position: relative;
   top: 50%;
@@ -48,16 +49,18 @@
 .form-field {
   margin-bottom: 10px;
 }
-.input-wrap {
-  position: relative;
-}
-.input-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition-duration: var(--transition-time);
-  transition-timing-function: var(--transition-function);
+.input {
+  &-wrap {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--transition-function);
+  }
 }
 
 .label-text {
@@ -79,6 +82,13 @@
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
   cursor: pointer;
+  &:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
+  &:focus + .input-icon {
+    fill: var(--accent-color);
+  }
 }
 .form-field-comment {
   margin-bottom: 20px;
@@ -95,17 +105,10 @@
   display: block;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
-}
-.form-input:focus {
-  border-color: var(--accent-color);
-  outline: none;
-}
-.form-text:focus {
-  border-color: var(--accent-color);
-  outline: none;
-}
-.form-input:focus + .input-icon {
-  fill: var(--accent-color);
+  &:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
 }
 
 .form-field-policy {
@@ -137,18 +140,21 @@
   color: var(--accent-color);
   margin-left: 3px;
 }
-.policy-icon-span {
-  margin-left: 10px;
-}
+
 .policy-icon {
   fill: none;
+  &-span {
+    margin-left: 10px;
+  }
 }
-.policy-check:checked + .check-text span {
-  border: none;
-  background-color: var(--accent-color);
-}
-.policy-check:checked + .check-text .policy-icon {
-  fill: var(--secondary-text-color);
+.policy-check {
+  &:checked + .check-text span {
+    border: none;
+    background-color: var(--accent-color);
+  }
+  &:checked + .check-text .policy-icon {
+    fill: var(--secondary-text-color);
+  }
 }
 .button-submit {
   width: 200px;
@@ -167,10 +173,10 @@
   transition-property: background-color;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
-}
-.button-submit:hover,
-.button-submit:focus {
-  background-color: #188ce8;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
 
 .modal-close {
@@ -191,11 +197,11 @@
   transition-property: color;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .modal-icon {
   fill: currentColor;
-}
-.modal-close:hover,
-.modal-close:focus {
-  color: var(--accent-color);
 }

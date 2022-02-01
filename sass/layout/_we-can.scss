@@ -7,6 +7,14 @@
 .we-can-list {
   display: flex;
   flex-wrap: wrap;
+  & .we-can-item:not(:last-child) {
+    display: block;
+    width: 370px;
+    margin-right: 30px;
+  }
+  & .we-can-item:last-child {
+    display: block;
+  }
 }
 .we-can-item {
   position: relative;
@@ -26,12 +34,4 @@
   position: absolute;
   left: 0;
   bottom: 0;
-}
-.we-can-list .we-can-item:not(:last-child) {
-  display: block;
-  width: 370px;
-  margin-right: 30px;
-}
-.we-can-list .we-can-item:last-child {
-  display: block;
 }

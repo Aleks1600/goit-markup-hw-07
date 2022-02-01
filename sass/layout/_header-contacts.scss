@@ -2,11 +2,12 @@
   display: flex;
   margin-left: auto;
 }
-.header-contacts-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .header-contacts-item {
   color: var(--primery-text-color);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .header-contacts.link {
   font-weight: 500;
@@ -19,13 +20,12 @@
   transition-property: color;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .header-icon-link {
   fill: currentColor;
   margin-right: 10px;
-}
-
-.header-contacts.link:hover,
-.header-contacts.link:focus {
-  color: var(--accent-color);
 }

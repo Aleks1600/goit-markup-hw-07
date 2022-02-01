@@ -7,6 +7,9 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: center;
+  & .filter-item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .button-portfolio {
@@ -25,17 +28,14 @@
   transition-property: color, background-color, box-shadow;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
-}
-.filter-list .filter-item:not(:last-child) {
-  margin-right: 8px;
-}
-.filter-list .button-portfolio:hover,
-.filter-list .button-portfolio:focus {
-  color: var(--secondary-text-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
 }
 
 .card-img {
@@ -48,12 +48,13 @@
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
   list-style: none;
+  & > .card-item {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
 }
-.card-list > .card-item {
-  flex-basis: calc((100% - 90px) / 3);
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-}
+
 .card-item:hover .card-text {
   transform: translateY(0);
 }
@@ -101,9 +102,9 @@
   transition-property: box-shadow;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
-}
-.card-link:hover,
-.card-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
