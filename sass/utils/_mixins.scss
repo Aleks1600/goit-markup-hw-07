@@ -1,3 +1,11 @@
+@mixin section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--link-text-color);
+}
+
 @mixin icon-link {
   width: 44px;
   height: 44px;
