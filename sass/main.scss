@@ -1,11 +1,15 @@
 @import "./utils/vars";
 @import "./base/reset";
 @import "./base/common";
+@import "./utils/mixins";
 @import "./utils/hidden";
 @import "./conponents/container";
 @import "./conponents/logo";
 @import "./conponents/title-section";
 @import "./conponents/sosial-icon";
+@import "./conponents/footer-subscription";
+@import "./conponents/modal";
+
 @import "./layout/header";
 @import "./layout/header-nav";
 @import "./layout/header-contacts";
@@ -16,5 +20,3 @@
 @import "./layout/clients";
 @import "./layout/portfolio";
 @import "./layout/footer";
-@import "./conponents/footer-subscription";
-@import "./conponents/modal";

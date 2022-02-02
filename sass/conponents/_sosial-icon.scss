@@ -1,23 +1,15 @@
-.card-icon-list {
+.social-list {
   display: flex;
   justify-content: center;
 }
-.card-icon-item + .card-icon-item {
+.social-item + .social-item {
   margin-left: 10px;
 }
 
 .card-icon-link {
-  width: 44px;
-  height: 44px;
   background-color: var(--secondary-text-color);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include icon-link;
   color: #afb1b8;
-  transition-property: color, background-color;
-  transition-duration: var(--transition-time);
-  transition-timing-function: var(--transition-function);
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -28,25 +20,9 @@
   }
 }
 
-.footer-social-list {
-  display: flex;
-  justify-content: center;
-}
-.footer-social-item + .footer-social-item {
-  margin-left: 10px;
-}
-
 .footer-icon-link {
-  width: 44px;
-  height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition-property: background-color;
-  transition-duration: var(--transition-time);
-  transition-timing-function: var(--transition-function);
+  @include icon-link;
   &:hover,
   &:focus {
     background-color: var(--accent-color);
